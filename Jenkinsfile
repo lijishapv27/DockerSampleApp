@@ -29,12 +29,6 @@ pipeline {
  
             }
         }
- stage('Run Docker container on remote hosts') {
-             
-            steps {
-                sh "docker -H ssh://jenkins@172.31.28.25 run -d -p 4001:80 lijisha27/java-maven-jenkins:"
- 
-            }
-        }
+
     }
 }
