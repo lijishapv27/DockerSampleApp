@@ -14,7 +14,7 @@ pipeline {
   stage('Publish image to Docker Hub') {
           
             steps {
-        withDockerRegistry([ credentialsId: "docker-credential", url: "" ]) {
+        withDockerRegistry([ credentialsId: "Mydockerhub-credential", url: "" ]) {
           sh  'docker push lijisha27/java-maven-jenkins:latest'
           sh  'docker push lijisha27/java-maven-jenkins:$BUILD_NUMBER' 
         }
